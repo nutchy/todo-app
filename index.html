@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <title>Basic of Vue</title>
+</head>
+
+<body>
+  <div id="app">
+    <span v-once>{{ message }}</span>
+    <span>{{ message }}</span>
+    <span v-html="fb"></span>
+    <button @click="change(doubleAge)">CLICK ME</button>
+    <input type="text" :value="message" @input="onValueChange">
+    <input type="text" v-model="form.firstName">
+    <input type="text" v-model="form.lastName">
+    <input type="text" v-model="message">
+    <input type="number" v-model="form.age">
+
+    <div v-show="isEven">even1</div>
+    <div v-if="isEven">even2</div>
+    <div v-else-if="!isEven && message">odd คี่</div>
+    <div v-else>odd</div>
+  </div>
+
+  <div>
+    <button onclick="ayo()"></button>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
